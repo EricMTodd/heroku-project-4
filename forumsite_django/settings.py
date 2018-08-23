@@ -60,7 +60,7 @@ ROOT_URLCONF = 'forumsite_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'build/static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,6 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'ec2-54-83-51-78.compute-1.amazonaws.com',
         'DATABASE': 'd18tekplrpsll1',
+        'NAME': 'srvvrs',
         'USER': 'bwvcngbwjyupvs',
         'PORT': '5432',
         'PASSWORD': '7aeef2900a5569c323af1f2e399cd69de99217fc33e7ad24a4c9acea3d336810',
