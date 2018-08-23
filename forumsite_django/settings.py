@@ -84,10 +84,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'ec2-54-83-51-78.compute-1.amazonaws.com',
         'DATABASE': 'd18tekplrpsll1',
-        'NAME': 'srvvrs',
         'USER': 'bwvcngbwjyupvs',
+        'PORT': '5432',
         'PASSWORD': '7aeef2900a5569c323af1f2e399cd69de99217fc33e7ad24a4c9acea3d336810',
-        'HEROKU CLI': 'heroku pg:psql postgresql-shallow-62459 --app heroku-project-4'
+        'URI': 'postgres://bwvcngbwjyupvs:7aeef2900a5569c323af1f2e399cd69de99217fc33e7ad24a4c9acea3d336810@ec2-54-83-51-78.compute-1.amazonaws.com:5432/d18tekplrpsll1',
+        'HEROKU CLI': 'heroku pg:psql postgresql-shallow-62459 --app heroku-project-4',
     }
 }
 
