@@ -39,7 +39,7 @@ class MainContainer extends Component {
         }); 
     }
     getThreads = async() => {
-        const threads = await fetch ("http://localhost:8000/threads/", {
+        const threads = await fetch ("http://heroku-project-4.herokuapp.com/threads/", {
             method: "GET"
         });
         console.log("threads:", threads)
@@ -51,7 +51,7 @@ class MainContainer extends Component {
         console.log("this is thread", thread)
         e.preventDefault();
         try { 
-            const createThread = await fetch("http://localhost:8000/threads/", {
+            const createThread = await fetch("http://heroku-project-4.herokuapp.com/threads/", {
                 method: "POST",
                 body: JSON.stringify(thread),
                 headers:{
@@ -74,7 +74,7 @@ class MainContainer extends Component {
         console.log(id, "this is deleteThread id");
         
         try { 
-            const deleteThread = await fetch("http://localhost:8000/threads/" + id, {
+            const deleteThread = await fetch("http://heroku-project-4.herokuapp.com8000/threads/" + id, {
                 method: 'DELETE',
                 body: JSON.stringify({"id": id}),
                 headers: {
@@ -99,7 +99,7 @@ class MainContainer extends Component {
         }
     }
     getPosts = async() => {
-        const posts = await fetch ("http://localhost:8000/posts/", {
+        const posts = await fetch ("http://heroku-project-4.herokuapp.com/posts/", {
             method: "GET"
         });
         const postsJson = await posts.json();
@@ -109,7 +109,7 @@ class MainContainer extends Component {
         e.preventDefault();
         console.log("post:", post)
         try { 
-            const createPost = await fetch("http://localhost:8000/posts/", {
+            const createPost = await fetch("http://heroku-project-4.herokuapp.com/posts/", {
                 method: "POST",
                 body: JSON.stringify(post),
                 headers:{
@@ -130,7 +130,7 @@ class MainContainer extends Component {
         
         try { 
 
-            const deletePost = await fetch("http://localhost:8000/posts/" + id, {
+            const deletePost = await fetch("http://heroku-project-4.herokuapp.com/posts/" + id, {
                 method: 'DELETE'
             });
 
@@ -156,7 +156,7 @@ class MainContainer extends Component {
     closeAndEdit = async (e) => {
         e.preventDefault();
         try{
-            const editResponse = await fetch('http://localhost:8000/posts/' + this.state.editPostId,{
+            const editResponse = await fetch('http://heroku-project-4.herokuapp.com/posts/' + this.state.editPostId,{
                 method: "PUT",
                 body: JSON.stringify(this.state.postToEdit),
                 headers:{
